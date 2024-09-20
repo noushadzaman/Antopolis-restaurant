@@ -3,8 +3,9 @@ import BikeIcon from '../../../public/icons/01.png'
 import SampleDish from '../../../public/about-us.png'
 
 const ChooseUs = () => {
+    
     return (
-        <section className="flex items-center gap-[84px] max-w-[1200px] mx-auto nunito">
+        <section className="flex items-center gap-[84px] max-w-[1200px] mx-auto nunito mt-[66px] mb-[103px]">
             <div className="max-w-[574px]">
                 <Image height={600} width={600} className="rounded-[29px]" src={SampleDish} alt="" />
             </div>

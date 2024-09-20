@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Grilled Chicken Salad",
+        "price": 12.99,
+        "imageUrl": "../../../public/dish1.png",
+        "rating": 5
+    },
+    {
+        "name": "Spaghetti Carbonara",
+        "price": 15.49,
+        "imageUrl": "../../../public/dish1.png",
+        "rating": 4
+    },
+    {
+        "name": "Beef Burger",
+        "price": 10.99,
+        "imageUrl": "../../../public/dish1.png",
+        "rating": 5
+    },
+    {
+        "name": "Margherita Pizza",
+        "price": 9.99,
+        "imageUrl": "../../../public/dish1.png",
+        "rating": 4
+    },
+    {
+        "name": "Chicken Tacos",
+        "price": 8.99,
+        "imageUrl": "../../../public/dish1.png",
+        "rating": 5
+    },
+    {
+        "name": "Vegan Buddha Bowl",
+        "price": 11.99,
+        "imageUrl": "../../../public/dish1.png",
+        "rating": 4
+    }
+]
