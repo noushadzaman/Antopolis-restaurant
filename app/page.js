@@ -4,7 +4,9 @@ import BestSellingSection from "@/components/home/BestSellingDishes/BestSellingS
 import ChooseUs from "@/components/home/ChooseUs/ChooseUs";
 import FeedBack from "@/components/home/Feedback/FeedBack";
 import LatestNews from "@/components/home/News/LatestNews";
+import Partners from "@/components/home/Partners/Partners";
 import TeamMember from "@/components/home/TeamMember/TeamMember";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <FeedBack />
       <TeamMember />
       <LatestNews />
+      <Partners />
+      <Footer />
     </>
   );
 }
