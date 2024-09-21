@@ -3,9 +3,10 @@ import Banner from "@/components/home/Banner/Banner";
 import BestSellingSection from "@/components/home/BestSellingDishes/BestSellingSection";
 import ChooseUs from "@/components/home/ChooseUs/ChooseUs";
 import FeedBack from "@/components/home/Feedback/FeedBack";
+import LatestNews from "@/components/home/News/LatestNews";
+import TeamMember from "@/components/home/TeamMember/TeamMember";
 
 export default function Home() {
-  
   return (
     <>
       <Banner />
@@ -13,6 +14,8 @@ export default function Home() {
       <ChooseUs />
       <BestSellingSection />
       <FeedBack />
+      <TeamMember />
+      <LatestNews />
     </>
   );
 }
