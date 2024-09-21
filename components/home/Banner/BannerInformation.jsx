@@ -23,6 +23,7 @@ const BannerInformation = ({ selectedDish, setSelectedDish, selectDish, isWrongC
             <div className="flex gap-[20px] pb-[124px] md:pb-[102px] pt-[70px] md:pt-[10px] relative">
                 {
                     fourDishes.map(d => <div
+                        key={dish}
                         onClick={() => {
                             if (window.innerWidth >= 768) { // Prevent click for mobile view (below 768px width)
                                 selectDish(d.dish);

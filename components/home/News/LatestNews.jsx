@@ -3,7 +3,7 @@ import News1 from '../../../public/news1.png'
 import ArrowRight from '../../../public/icons/ArrowRight.png'
 import CalenderIcon from '../../../public/icons/Calendar.png'
 import ChatsIcon from '../../../public/icons/Chats.png'
-const foodArray = [
+const newsArray = [
     {
         date: "05 Jan 2022",
         comments: 10,
@@ -44,8 +44,9 @@ const LatestNews = () => {
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-[24px]  justify-center mt-[50px] roboto">
                     {
-                        foodArray.map(f => <div className="w-[424px] shadow-xl">
+                        newsArray.map((f, idx) => <div className="w-[424px] shadow-xl">
                             <Image
+                                key={idx}
                                 className="px-[16px] w-full mt-[-19px] mb-[24px]"
                                 width={392}
                                 height={323}
