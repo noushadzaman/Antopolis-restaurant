@@ -44,9 +44,11 @@ const LatestNews = () => {
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-[24px]  justify-center mt-[50px] roboto">
                     {
-                        newsArray.map((f, idx) => <div className="w-[424px] shadow-xl">
+                        newsArray.map((f, idx) => <div
+                            key={idx}
+                            className="w-[424px] shadow-xl">
                             <Image
-                                key={idx}
+
                                 className="px-[16px] w-full mt-[-19px] mb-[24px]"
                                 width={392}
                                 height={323}
