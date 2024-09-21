@@ -5,7 +5,7 @@ import Member1 from '../../../public/member1.png'
 import BG from '../../../public/team-member-bg.png'
 import MembersCarousel from "./MembersCarousel";
 
-const slides = [
+const members = [
     {
         id: 0,
         name: 'Mark Henry',
@@ -41,14 +41,14 @@ const slides = [
 const TeamMember = () => {
 
     return (
-        <div className="relative mb-[361px]">
-            <div className="h-[460px]">
+        <div className="mb-[135px]">
+            <div className="relative h-[460px]">
                 <Image
                     width={1600}
                     height={300}
                     src={BG}
                     alt="Background"
-                    className="absolute inset-0 object-cover w-full h-[460px] "
+                    className="inset-0 object-cover w-full h-[460px]"
                 />
                 <div className="absolute inset-0 bg-[#AD1519D9] pt-[120px] bg-opacity-15 flex justify-center ">
                     <div className="text-center text-[white] relative">
@@ -62,7 +62,7 @@ const TeamMember = () => {
                 </div>
             </div>
 
-            <MembersCarousel members={slides} />
+            <MembersCarousel members={members} />
         </div>
     );
 };

@@ -178,9 +178,9 @@ const Footer = () => {
 
             </div>
             <div className="bg-[#A52A2A] roboto py-[22px]">
-                <div className=" max-w-[1200px] mx-auto flex justify-between">
+                <div className=" max-w-[1200px] mx-auto flex justify-center items-center md:justify-between ">
                     <p className="text-[16px] font-[400] text-white">Copyright © 2024. All rights reserved </p>
-                    <div className="flex gap-[49px]">
+                    <div className="gap-[49px] hidden md:flex">
                         <p className="text-[16px] font-[400] text-white">Privacy Policy</p>
                         <p className="text-[16px] font-[400] text-white">Term of Use</p>
                         <p className="text-[16px] font-[400] text-white">Partner</p>

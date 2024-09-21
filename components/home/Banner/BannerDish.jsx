@@ -10,14 +10,14 @@ const BannerDish = ({ selectedDish }) => {
         <>
             <div
                 className={`
-                    w-[1312.52px] h-[1282.4px] rounded-full absolute z-0 top-[400px] right-[-656px] flex items-center justify-center gap-[200px] ease-in duration-500 
+                   w-[437.61px] md:w-[1312.52px] h-[437.61px] md:h-[1282.4px] rounded-full absolute z-0 top-[478px] md:top-[400px] right-[-150px] md:right-[-656px] flex items-center justify-center gap-[200px] ease-in duration-500 
                     ${selectedDish === 0 && 'rotate-[0deg] bg-[#A52A2A] '}
                     ${selectedDish === 1 && 'rotate-[90deg] bg-[#0A3659]'}
                     ${selectedDish === 2 && 'rotate-[180deg] bg-[#A95C68]'}
                     ${selectedDish === 3 && 'rotate-[270deg] bg-[#003333]'}
                     `}
             >
-                <div className="flex flex-col gap-[200px] shrink-0">
+                <div className="hidden md:flex flex-col gap-[200px] shrink-0">
                     <Image
                         className="h-[627px] w-auto shrink-0"
                         src={BannerDish1}
@@ -35,7 +35,7 @@ const BannerDish = ({ selectedDish }) => {
 
                 </div>
 
-                <div className="flex flex-col gap-[200px] shrink-0">
+                <div className="hidden md:flex flex-col gap-[200px] shrink-0">
                     <Image
                         className="h-[627px] w-auto shrink-0"
                         src={BannerDish4}

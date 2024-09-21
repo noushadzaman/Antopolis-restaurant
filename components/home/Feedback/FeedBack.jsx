@@ -4,6 +4,7 @@ import Image from "next/image";
 import Customer1 from "../../../public/customer.png";
 import Chef from "../../../public/chef.png";
 import { useState } from "react";
+import { motion } from 'framer-motion';
 
 const reviews = [
     {
@@ -54,50 +55,76 @@ const FeedBack = () => {
     const [selectedReview, setSelectedReview] = useState(0);
 
     return (
-        <div className="nunito md:flex items-center justify-center max-w-[1200px] mx-auto">
+        <div className="nunito flex flex-col-reverse md:flex-row items-center justify-center max-w-[1200px] mx-auto px-[17px] md:px-[0] gap-[65px] md:gap-[105px] mb-[30px] md:mb-[0]">
             <div className="md:w-[50%]">
-                <h3 className="font-[700] text-[50px] text-[#000000]">Customer
-                    <span className="text-[#AD1519]"> Feedback</span>
+                <h3 className="font-[700] leading-[36px] md:leading-[60px] text-[30px] md:text-[50px] text-[#000000]">Customer
+                    <span className="text-[#AD1519]">Feedback</span>
                 </h3>
-                <p className="text-[#3D3D3D] font-[400] text-[25px]">{reviews[selectedReview].review}</p>
-                <div className="flex justify-between items-center">
-                    <div className="flex gap-[18px] pt-[34px]">
-                        <Image
-                            src={Customer1}
-                            className="rounded-full border border-black"
-                            height={74} width={74}
-                            alt={'profile picture'}
-                        />
-                        <div className="flex flex-col gap-[4px]">
-                            <p
-                                className="font-[700] text-[24px]"
-                            >{reviews[selectedReview].name}</p>
-                            <p
-                                className="font-[500] text-[18px]"
-                            >{reviews[selectedReview].designation}</p>
+                <motion.div
+                    initial={{ opacity: 0, x: -200 }}
+                    whileInView={{
+                        opacity: 1,
+                        x: 0,
+                        transition: {
+                            duration: 0.6
+                        }
+                    }}
+                    viewport={{ once: true }}
+                >
+                    <p className="text-[#3D3D3D] font-[400] text-[14px] md:text-[25px] leading-[18.2px] md:leading-[32.5px] ">{reviews[selectedReview].review}</p>
+                    <div className="flex justify-between items-center">
+                        <div className="flex gap-[18px] pt-[34px]">
+                            <Image
+                                src={Customer1}
+                                className="rounded-full border border-black"
+                                height={74} width={74}
+                                alt={'profile picture'}
+                            />
+                            <div className="flex flex-col gap-[4px]">
+                                <p
+                                    className="font-[700] text-[24px]"
+                                >{reviews[selectedReview].name}</p>
+                                <p
+                                    className="font-[500] text-[18px]"
+                                >{reviews[selectedReview].designation}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-[9px]">
+                            {
+                                Array(reviews.length).fill(null).map((_, index) => (
+                                    <div
+                                        key={index}
+                                        onClick={() => setSelectedReview(index)}
+                                        className={`rounded-full w-[18px] h-[18px] border border-[#A52A2A] cursor-pointer ${selectedReview === index && 'bg-[#A52A2A]'}`}
+                                    ></div>
+                                ))
+                            }
                         </div>
                     </div>
-                    <div className="flex items-center gap-[9px]">
-                        {
-                            Array(reviews.length).fill(null).map((_, index) => (
-                                <div
-                                    key={index}
-                                    onClick={() => setSelectedReview(index)}
-                                    className={`rounded-full w-[18px] h-[18px] border border-[#A52A2A] cursor-pointer ${selectedReview === index && 'bg-[#A52A2A]'}`}
-                                ></div>
-                            ))
-                        }
-                    </div>
+                </motion.div>
+            </div>
+
+            <motion.div
+                className="md:w-[50%] z-20"
+                initial={{ opacity: 0, y: 450 }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                        duration: 0.6
+                    }
+                }}
+                viewport={{ once: true }}
+            >
+                <div>
+                    <Image
+                        src={Chef}
+                        className=""
+                        height={589} width={590}
+                        alt={'profile picture'}
+                    />
                 </div>
-            </div>
-            <div className="md:w-[50%]">
-                <Image
-                    src={Chef}
-                    className=""
-                    height={589} width={590}
-                    alt={'profile picture'}
-                />
-            </div>
+            </motion.div>
         </div>
     );
 };

@@ -5,7 +5,7 @@ import { Input } from "../../ui/input";
 const SearchBar = () => {
 
     return (
-        <form className="relative">
+        <form className="hidden md:relative">
             <Image
                 className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 z-10 h-[39px] w-[39px]"
                 src={SearchIcon}
